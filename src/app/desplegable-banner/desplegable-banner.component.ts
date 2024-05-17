@@ -7,10 +7,13 @@ import { Component, Input } from '@angular/core';
 })
 export class DesplegableBannerComponent {
   @Input() title: string = 'Dropdown';
-  @Input() items: string[] = [];
+  @Input() items: { label: string; url: string }[] = [];
   isOpen: boolean = false;
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
+  }
+  navigateTo(url: string) {
+    window.location.href = url;
   }
 }

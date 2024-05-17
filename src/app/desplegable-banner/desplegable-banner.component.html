@@ -3,7 +3,8 @@
     {{ title }}
   </button>
   <div class="dropdown-menu" [class.show]="isOpen">
-    <a *ngFor="let item of items" href="#">{{ item }}</a>
-    <ng-content></ng-content>
+    <a *ngFor="let item of items" (click)="navigateTo(item.url)">
+      {{ item.label }}
+    </a>
   </div>
 </div>

@@ -6,7 +6,23 @@
   />
 
   <div class="container">
-    <app-desplegable-banner title="Comprar" [items]="dropdownItems">
+    <app-desplegable-banner
+      [title]="'Comprar'"
+      [items]="[
+        {
+          label: 'Steam',
+          url: 'https://store.steampowered.com/app/1849250/EA_SPORTS_WRC/'
+        },
+        {
+          label: 'Xbox',
+          url: 'https://www.xbox.com/es-AR/auth/msa?action=loggedIn&locale_hint=es-AR'
+        },
+        {
+          label: 'Playstation',
+          url: 'https://www.playstation.com/es-ar/games/ea-sports-wrc/'
+        }
+      ]"
+    >
     </app-desplegable-banner>
   </div>
 </div>
